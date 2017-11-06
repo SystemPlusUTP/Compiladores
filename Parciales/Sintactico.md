@@ -12,9 +12,9 @@ Primero eliminamos la recursividad por la izquierda la nueva gramatica sera:
 	```antlr
 		E 	-> 	TE'
 		E' 	->	+TE'	|	-TE'	|	λ
-		T		->	FT'
+		T	->	FT'
 		T'	->	*FT'	|	/FT'	|	λ
-		F		->	(E)		|	id		| num
+		F	->	(E)		|	id		| num
 	```
 
 1. Muestre las acciones  del analizador sintactico LL para la cadena  de  entrada:
@@ -23,7 +23,7 @@ Primero eliminamos la recursividad por la izquierda la nueva gramatica sera:
 
 	Construya los conjunto primeros y siguientes
 
-	* Primeros:
+* Primeros:
 
 		PRIMEROS(E) => {( , id , num}
 		PRIMEROS(E') 	=> {+ , - , λ}
@@ -82,16 +82,14 @@ el proceso de backtraking.
 1. Muestre las acciones  del analizador sintactico LL para la cadena  de  entrada:
 
 	* ((())((())()))
-
 	Construya los conjunto primeros y siguientes
-
 	* Primeros:
 
-		PRIMEROS(S)	=> {( , λ}
+			PRIMEROS(S)	=> {( , λ}
 
-  * Siguientes:
+	* Siguientes:
 
-		SIGUIENTES(S)	=> {$ , )}
+			SIGUIENTES(S)	=> {$ , )}
 
 | Pasos     | Pila     | 		Cadena      | Acciones     |
 | :-------- | :------- | :------------- | :----------- |
