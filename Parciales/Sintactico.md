@@ -23,21 +23,21 @@ Primero eliminamos la recursividad por la izquierda la nueva gramatica sera:
 
 	Construya los conjunto primeros y siguientes
 
-###	* Primeros:
+	* Primeros:
 
-		PRIMEROS(E) 	=> {( , id , num}
+		PRIMEROS(E) => {( , id , num}
 		PRIMEROS(E') 	=> {+ , - , λ}
-		PRIMEROS(T) 	=> {( , id , num}
+		PRIMEROS(T) => {( , id , num}
 		PRIMEROS(T') 	=> {* , / , λ}
-		PRIMEROS(F) 	=> {( , id , num}
+		PRIMEROS(F) => {( , id , num}
 
-## * Siguientes:
+ * Siguientes:
 
-		SIGUIENTES(E)		=> {$ , )}
+		SIGUIENTES(E)	=> {$ , )}
 		SIGUIENTES(E')	=> {$ , )}			
-		SIGUIENTES(T)		=> {$ , ) , + , -}			
+		SIGUIENTES(T)	=> {$ , ) , + , -}			
 		SIGUIENTES(T')	=> {$ , ) , + , -}			
-		SIGUIENTES(F)		=> {$ , ) , + , - , * , /}			
+		SIGUIENTES(F)	=> {$ , ) , + , - , * , /}			
 
 
 | Pasos     | Pila     | 		Cadena      | Acciones     |
@@ -85,13 +85,13 @@ el proceso de backtraking.
 
 	Construya los conjunto primeros y siguientes
 
-###	* Primeros:
+	* Primeros:
 
-		PRIMEROS(S) 	=> {( , λ}
+		PRIMEROS(S)	=> {( , λ}
 
-## * Siguientes:
+  * Siguientes:
 
-		SIGUIENTES(S)		=> {$ , )}
+		SIGUIENTES(S)	=> {$ , )}
 
 | Pasos     | Pila     | 		Cadena      | Acciones     |
 | :-------- | :------- | :------------- | :----------- |
