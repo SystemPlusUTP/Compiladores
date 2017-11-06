@@ -10,11 +10,11 @@
 Primero eliminamos la recursividad por la izquierda la nueva gramatica sera:
 
 	```antlr
-		E 	-> 	TE'
-		E' 	->	+TE'	|	-TE'	|	λ
-		T	->	FT'
-		T'	->	*FT'	|	/FT'	|	λ
-		F	->	(E)		|	id		| num
+		E  -> TE'
+		E' -> +TE' | -TE' | λ
+		T  -> FT'
+		T' -> *FT' | /FT' | λ
+		F  -> (E)  | id	  | num
 	```
 
 1. Muestre las acciones  del analizador sintactico LL para la cadena  de  entrada:
@@ -25,11 +25,11 @@ Primero eliminamos la recursividad por la izquierda la nueva gramatica sera:
 
 * Primeros:
 
-		PRIMEROS(E) => {( , id , num}
-		PRIMEROS(E') 	=> {+ , - , λ}
-		PRIMEROS(T) => {( , id , num}
-		PRIMEROS(T') 	=> {* , / , λ}
-		PRIMEROS(F) => {( , id , num}
+		PRIMEROS(E)  => {( , id , num}
+		PRIMEROS(E') => {+ , - , λ}
+		PRIMEROS(T)  => {( , id , num}
+		PRIMEROS(T') => {* , / , λ}
+		PRIMEROS(F)  => {( , id , num}
 
  * Siguientes:
 
