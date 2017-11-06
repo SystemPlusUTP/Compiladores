@@ -41,7 +41,7 @@ Primero eliminamos la recursividad por la izquierda la nueva gramatica sera:
 
 
 | Pasos     | Pila     | 		Cadena      | Acciones     |
-| :-------- | :------- | :------------- | :----------- |
+| :--------: | -------: | -------------: | :-----------: |
 |			1			|        E$| id-id*id+id+id$|	E -> TE'		 |
 |			2			|      TE'$| id-id*id+id+id$|	T -> FT'		 |
 |			3			|		 FT'E'$| id-id*id+id+id$|	F -> id		   |
@@ -59,7 +59,7 @@ Primero eliminamos la recursividad por la izquierda la nueva gramatica sera:
 2. Construya la tabla para el analizador sintactico. continue oe hagale pues la tabla
 
 | NT\T |   +    |   -     |   /     |     *    |     id    |    num   |    (    |    )    |    $   |
-| :--- | :----- | :------ | :------ | :------- | :-------- | :------- | :------ | :------ | :----- |
+| :--: | :----: | :-----: | :-----: | :------: | :-------: | :------: | :-----: | :-----: | :----: |
 | E    | error  |  error  |  error  |  error   | E -> TE'  | E -> TE' | E -> TE'|  error  |  error |
 | E'   |E'->+TE'| E'->-TE'|  error  |  error   |   error   |   error  |  error  |  E'->λ  |  E'->λ |
 | T    | error  |  error  |  error  |  error   | T -> FT'  | T -> FT' | T -> FT'|  error  |  error |
@@ -92,7 +92,7 @@ el proceso de backtraking.
 			SIGUIENTES(S)	=> {$ , )}
 
 | Pasos     | Pila     | 		Cadena      | Acciones     |
-| :-------- | :------- | :------------- | :----------- |
+| :-------: | -------: | -------------: | :----------: |
 |			1			|        S$| ((())((())()))$|	S -> (S)S		 |
 |			2			|     (S)S$| ((())((())()))$|	Reducir			 |
 |			3			|		 	 S)S$|  (())((())()))$|	S -> (S)S		 |
